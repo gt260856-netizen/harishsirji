@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harish Trading Academy | Free Market Learning in Kannada & English</title>
+<meta name="description" content="Free educational Telegram channel by Harish Trading Academy. Simple stock market lessons in Kannada and English, with risk awareness first.">
+<meta name="theme-color" content="#e6f7f4">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq.disablePushState = true;
+fbq('set', 'autoConfig', false, '1695202245642844');
+fbq('init', '1695202245642844');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1695202245642844&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Kannada:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ice:#f2fbfa;
+  --ice-2:#dcf2ee;
+  --mint:#5fe0bb;
+  --mint-soft:#b8f0de;
+  --teal:#0e9488;
+  --teal-deep:#0b5e57;
+  --aqua:#9be3f2;
+  --ink:#0a3633;
+  --ink-soft:#3f625f;
+  --line:rgba(255,255,255,.85);
+  --glass:linear-gradient(150deg,rgba(255,255,255,.72),rgba(255,255,255,.42));
+  --glass-border:rgba(255,255,255,.9);
+  --kn:'Noto Sans Kannada','Work Sans',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  height:100dvh;overflow:hidden;
+  padding:calc(10px + env(safe-area-inset-top)) calc(10px + env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) calc(10px + env(safe-area-inset-left));
+  font-family:'Work Sans','Noto Sans Kannada',system-ui,sans-serif;
+  color:var(--ink);
+  background-color:#e3f5f1;
+  background-image:
+    radial-gradient(42% 32% at 12% 8%,rgba(95,224,187,.55),transparent 70%),
+    radial-gradient(38% 30% at 92% 22%,rgba(155,227,242,.65),transparent 70%),
+    radial-gradient(45% 35% at 85% 92%,rgba(14,148,136,.35),transparent 70%),
+    radial-gradient(40% 30% at 6% 80%,rgba(184,240,222,.8),transparent 70%),
+    linear-gradient(170deg,#f4fcfb 0%,#dff4ef 55%,#cdeee8 100%);
+  display:flex;align-items:center;justify-content:center;
+  -webkit-font-smoothing:antialiased;
+}
+.kn{font-family:var(--kn)}
+
+/* ===== Mockup glass frame ===== */
+.frame{
+  position:relative;height:100%;width:100%;max-width:460px;
+  border-radius:30px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.95);
+  background:linear-gradient(160deg,rgba(255,255,255,.62) 0%,rgba(240,252,249,.38) 50%,rgba(220,245,240,.5) 100%);
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:0 30px 60px -20px rgba(11,94,87,.35),0 8px 24px -10px rgba(11,94,87,.2),inset 0 1px 0 rgba(255,255,255,1);
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:clamp(14px,2.4vh,22px) clamp(14px,4.4vw,22px) clamp(10px,1.6vh,14px);
+  gap:clamp(6px,1.2vh,12px);
+}
+.frame::before{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  top:-30%;left:-60%;width:80%;height:160%;
+  background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.55) 45%,rgba(255,255,255,.12) 60%,transparent 75%);
+  transform:rotate(18deg);
+}
+.frame>*{position:relative;z-index:1}
+
+/* ===== Header ===== */
+.head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.mark{
+  width:clamp(44px,6.4vh,58px);height:clamp(44px,6.4vh,58px);flex-shrink:0;border-radius:50%;
+  padding:2.5px;background:linear-gradient(140deg,#5fe0bb,#0e9488 55%,#9be3f2);
+  box-shadow:0 6px 16px -6px rgba(11,94,87,.6);
+}
+.mark img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;border:2px solid #fff}
+.brand-name{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(14px,4vw,16.5px);line-height:1.15;letter-spacing:-.2px}
+.brand-name small{display:block;font-family:'Work Sans',sans-serif;font-weight:600;font-size:clamp(10px,2.7vw,11.5px);color:var(--ink-soft);letter-spacing:.2px}
+.lang-chip{
+  flex-shrink:0;font-size:10.5px;font-weight:700;color:var(--teal-deep);
+  padding:5px 10px;border-radius:99px;
+  background:var(--glass);border:1px solid var(--glass-border);
+  box-shadow:inset 0 1px 0 #fff;
+}
+
+/* ===== Hero copy ===== */
+.hero{display:flex;flex-direction:column;gap:clamp(5px,1vh,9px)}
+.tag{
+  align-self:flex-start;display:inline-flex;align-items:center;gap:7px;
+  font-size:clamp(11px,3vw,12.5px);font-weight:700;color:var(--teal-deep);
+  padding:5px 12px 5px 8px;border-radius:99px;
+  background:linear-gradient(135deg,rgba(184,240,222,.85),rgba(255,255,255,.55));
+  border:1px solid var(--glass-border);box-shadow:inset 0 1px 0 #fff;
+}
+.tag i{width:18px;height:18px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-style:normal}
+.tag i svg{width:11px;height:11px}
+h1{
+  font-family:'Sora',sans-serif;font-weight:800;
+  font-size:clamp(22px,6.6vw,30px);line-height:1.12;letter-spacing:-.6px;color:var(--ink);
+}
+h1 .accent{background:linear-gradient(90deg,#0e9488,#0891b2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.h1-kn{font-family:var(--kn);font-weight:700;font-size:clamp(14px,4vw,17px);line-height:1.4;color:var(--teal-deep)}
+.sub{font-size:clamp(12.5px,3.4vw,14px);line-height:1.45;color:var(--ink-soft)}
+
+/* ===== Centrepiece: lesson-card stack ===== */
+.stack{position:relative;height:clamp(96px,15vh,134px);margin:0 auto;width:min(100%,330px)}
+.lcard{
+  position:absolute;left:50%;top:50%;width:78%;height:78%;
+  border-radius:18px;padding:10px 14px;
+  background:var(--glass);border:1px solid var(--glass-border);
+  box-shadow:0 14px 30px -16px rgba(11,94,87,.45),inset 0 1px 0 #fff;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.lcard .lbl{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--teal)}
+.lcard .ttl{font-family:'Sora',sans-serif;font-weight:700;font-size:clamp(12.5px,3.5vw,14.5px);color:var(--ink)}
+.lcard .bars span{display:block;height:6px;border-radius:6px;background:rgba(14,148,136,.18);margin-top:5px}
+.lcard .bars span:nth-child(2){width:72%}
+.c1 .ttl,.c2 .ttl{visibility:hidden}
+.c1{transform:translate(-50%,-50%) translate(-34px,-6px) rotate(-9deg) scale(.92);opacity:.8}
+.c2{transform:translate(-50%,-50%) translate(34px,-6px) rotate(8deg) scale(.92);opacity:.85}
+.c3{
+  transform:translate(-50%,-50%) translateY(6px);
+  background:linear-gradient(150deg,rgba(255,255,255,.95),rgba(232,250,245,.8));
+  animation:floatCard 5s ease-in-out infinite;
+}
+.c3 .row{display:flex;align-items:center;gap:10px}
+.shield{width:34px;height:34px;flex-shrink:0;border-radius:11px;background:linear-gradient(140deg,#5fe0bb,#0e9488);display:grid;place-items:center}
+.shield svg{width:19px;height:19px}
+.c3 .kn{font-size:11.5px;font-weight:600;color:var(--teal-deep)}
+@keyframes floatCard{0%,100%{transform:translate(-50%,-50%) translateY(6px)}50%{transform:translate(-50%,-50%) translateY(1px)}}
+
+/* ===== Learning points ===== */
+.points{display:flex;flex-direction:column;gap:clamp(5px,0.9vh,8px)}
+.pt{
+  display:flex;align-items:flex-start;gap:11px;
+  padding:clamp(7px,1.15vh,10px) 12px;border-radius:16px;
+  background:var(--glass);border:1px solid var(--glass-border);
+  box-shadow:inset 0 1px 0 #fff,0 6px 16px -12px rgba(11,94,87,.4);
+}
+.pt .ic{width:32px;height:32px;flex-shrink:0;border-radius:10px;display:grid;place-items:center;background:linear-gradient(140deg,rgba(95,224,187,.35),rgba(155,227,242,.4));border:1px solid rgba(255,255,255,.9)}
+.pt .ic svg{width:17px;height:17px;stroke:var(--teal-deep);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pt b{display:block;font-family:var(--kn);font-weight:700;font-size:clamp(13px,3.6vw,14.5px);line-height:1.3}
+.pt .en{display:block;font-size:clamp(11.5px,3.1vw,12.5px);font-weight:600;color:var(--teal-deep);line-height:1.3}
+.pt .d{display:block;font-size:clamp(11px,2.9vw,12px);color:var(--ink-soft);line-height:1.35;margin-top:1px}
+
+/* ===== Bottom glass dock ===== */
+.dock{
+  margin:0 calc(-1 * clamp(6px,2vw,10px));
+  padding:clamp(10px,1.6vh,14px) clamp(10px,3vw,14px) clamp(6px,1vh,8px);
+  border-radius:24px;
+  background:linear-gradient(160deg,rgba(255,255,255,.8),rgba(230,248,244,.6));
+  border:1px solid var(--glass-border);
+  box-shadow:inset 0 1px 0 #fff,0 -10px 30px -18px rgba(11,94,87,.35);
+  display:flex;flex-direction:column;gap:clamp(6px,1vh,9px);
+}
+.cta-wrap{position:relative}
+.cta-wrap::after{
+  content:"";position:absolute;inset:-4px;border-radius:22px;pointer-events:none;
+  border:2px solid rgba(20,184,166,.55);
+  animation:ring 2.2s ease-out infinite;
+}
+@keyframes ring{0%{opacity:.9;transform:scale(.98)}100%{opacity:0;transform:scale(1.07)}}
+.cta{
+  position:relative;display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;min-height:clamp(54px,7.6vh,64px);padding:10px 16px;border-radius:18px;
+  font-family:'Work Sans',sans-serif;font-weight:900;font-size:clamp(16px,4.6vw,21px);
+  letter-spacing:.3px;line-height:1.15;text-align:center;color:#fff;text-decoration:none;
+  background:linear-gradient(110deg,#0b5e57,#0e9488,#14b8a6,#2dd4bf,#0e9488,#0b5e57);
+  background-size:260% 100%;
+  animation:flow 4.5s linear infinite;
+  box-shadow:0 12px 26px -10px rgba(14,148,136,.75),inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(0,0,0,.12);
+  text-shadow:0 1px 2px rgba(0,0,0,.18);
+  -webkit-tap-highlight-color:transparent;
+  overflow-wrap:anywhere;
+}
+.cta:active{transform:scale(.985)}
+@keyframes flow{0%{background-position:0% 50%}100%{background-position:260% 50%}}
+.cta svg{width:22px;height:22px;flex-shrink:0;fill:#fff}
+.status{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  font-family:var(--kn);font-size:clamp(11px,2.9vw,12px);font-weight:600;color:var(--teal-deep);text-align:center;
+}
+.status .dot{width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.2);flex-shrink:0}
+.disc{
+  font-size:clamp(9px,2.4vw,10px);line-height:1.4;color:#4e6e6b;
+  padding:7px 10px;border-radius:12px;
+  background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.85);
+}
+.disc p+p{margin-top:3px}
+.disc .kn{font-size:clamp(9px,2.4vw,10px)}
+.foot{font-size:clamp(8.5px,2.2vw,9.5px);color:#5d7c79;text-align:center;line-height:1.4}
+.foot a{color:var(--teal-deep);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+
+/* ===== Privacy popup ===== */
+.pp{
+  position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;
+  padding:16px;background:rgba(6,40,37,.4);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.pp:target{display:flex}
+.pp.open{display:flex}
+.pp.closed{display:none}
+.pp-box{
+  position:relative;width:100%;max-width:440px;max-height:88dvh;overflow-y:auto;
+  border-radius:24px;padding:22px 18px 18px;
+  background:linear-gradient(160deg,rgba(250,255,254,.97),rgba(232,248,244,.96));
+  border:1px solid #fff;box-shadow:0 30px 60px -20px rgba(6,40,37,.5),inset 0 1px 0 #fff;
+  color:var(--ink);
+}
+.pp-box h2{font-family:'Sora',sans-serif;font-size:19px;font-weight:800;margin-bottom:2px;padding-right:36px}
+.pp-box .upd{font-size:11.5px;color:var(--ink-soft);margin-bottom:12px}
+.pp-box h3{font-family:'Sora',sans-serif;font-size:13.5px;font-weight:700;margin:12px 0 4px;color:var(--teal-deep)}
+.pp-box h3 .kn{font-weight:600;font-size:12.5px;color:var(--ink-soft)}
+.pp-box p{font-size:12.5px;line-height:1.55;color:#284e4a}
+.pp-box p.kn{font-size:12px;color:var(--teal-deep);margin-top:2px}
+.pp-x{
+  position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;
+  border:1px solid rgba(14,148,136,.25);background:#fff;color:var(--ink);
+  font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center;
+}
+
+/* ===== Height breakpoints ===== */
+@media (max-height:940px){.sub{display:none}}
+@media (max-height:900px){.pt .d{display:none}}
+@media (max-height:800px){
+  h1{font-size:clamp(20px,6vw,26px)}
+  .h1-kn{font-size:clamp(13px,3.7vw,15px)}
+  .pt{padding:7px 11px}
+  .pt .ic{width:28px;height:28px}
+  .stack{height:clamp(84px,13vh,110px)}
+}
+@media (max-height:700px){
+  body{padding:calc(6px + env(safe-area-inset-top)) calc(6px + env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) calc(6px + env(safe-area-inset-left))}
+  .frame{border-radius:24px;padding:11px 13px 8px;gap:5px}
+  .dock{border-radius:20px;padding:9px 10px 6px;gap:5px}
+  h1{font-size:clamp(19px,5.6vw,23px)}
+  .mark{width:40px;height:40px}
+  .lang-chip{display:none}
+  .pt{padding:6px 10px;border-radius:13px}
+  .pt .ic{width:26px;height:26px;border-radius:8px}
+  .pt .ic svg{width:15px;height:15px}
+  .cta{min-height:50px}
+  .disc{padding:5px 8px}
+}
+@media (max-height:620px){.stack{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<main class="frame">
+
+  <header class="head">
+    <div class="brand">
+      <div class="mark"><img src="data:image/webp;base64,UklGRt4LAABXRUJQVlA4INILAADwLwCdASp4AHgAPm0wk0ckIqGhKJLckIANiWYAtc/fS//d+dnyf2Q+qY8z1h830nbdbzTftF6snSAf0n/M9dD6Lnlye0rXwv6zwz8z4adp32zEEbtM5Ja3NZ8tmogsR8U/R/LolcVoWYMWNYnjIPXhakoe737IADNzrsR5sy713aA/n36tES0ffOzsUkuTbMf3DJMJUpyNSV4UN6+ddLVG80dYU5KV7GR7p4HEl9wi4bWovO4XPFskIqKxXMMIRb4ID78U9sWhLiB3/5R31duEfP7yYykVNIjtwFiV1XiJaaTSEA3Pn9JfGwqkdLGcaMYEZ177+Q9FG4f12WeGHPt2qlYU6+LgRutbnl2QD/IvshkpfecAK1NS5vKiGBAwChUBN9NtxB/mpcWjym/lzI1bfy13jRkGHxpPIBZc2WJR8RvUB6mAhUmmujBvQampb6p6AuvJIIdLjmvRdStybOfDPITAgYX7v+gH2WK8b6FxiBhW6cgQ9ooyf7Gx3vR3eoxTwpnWoxvh4AD+/y0PxtrY1NB43vSR/mUh4gTZCjmktcke3eYMuPPBdmz1zI72apRRifY89J6GV6Co79x/p0T8hfu/cWFaxzYbDqeHMxw1zuecipnRSG3L7hFjfEEzL+6D5KJrUlRPOX6IDacarVfJJINYK9vd4MRa6okK4K2RMGuJHnfHDqY3UIcjVv9Y6/TqqmM0byalhaGUwN3XdcakWOhPQ3ET4HoMPm8gCLqu65og6WgMrT/7dft1z+yJPgjZp65R9Me5+NLHkoKiMhREMMQgVOAIzrmngW0832vN3O0PGzRJBMbC1mjL7d7ImpDzjkceztCGo6FEQDTnKEPxJI2a9cP/ucFCi36wCg9YN5NvN4CvnaD5IHX1Jz5f8sOGQCgYRc9Oo3l6ybEQFRJAjucieAkMjL8wwI3oaUQfs3tXOMYU1pgQu2gMxCEjq+8YDMPl9eG1/Ky+0qXQkOdpMPPk5EU4hJCpEdm4Lq59lx64GLf9TQemzEga0YYEG+Z+yC+wReYe50RdY0rdFg7uG7QWD5SNEPtdfMslLpvZozPFUps9yh2u1DMwf2dJDo3c9y3Y9W/gyXy9Hc6wdproQ/HBrBwRVxy9r+mlDF191lMIT/b/hbM+oEU5Wu5d+PMTuO8miJhIYDY44L3I67OpfcP2MqT+8dXwsklAd/GMJ+C+tSzNGDt68LcPTbIsHAR+FOj4l0jsZ4Nf1ZAXzkYdhKGuXVkM7ZQfOYyG7ZwRGnGWfxFjJesSj8k3A/BgKCKarjAxWne9AqU2uPugt0YtLYvgCbD2OWocgvxc/h6OdmwueWb6uaJrkghFyBp2diUPHqOXm+4ex3uJkhqTy8tbTM5IV8nzXKL6oZ7yJwGUK2KRs4k9JYX+gPFotuoOrdlFM4N/RVw4JU5dYhY21LNxQqzz+wIfQrpTeNt1vq64vrWPLHEy6VlffhKflOzPkhm7mYoz49TYE60IoTOhV88BgqYC7tnaqHoTZyLEwaOsij/XyAKxqxUrpjya25NB6aZAhT/Jq9opSseMQjl4LGMhlv2+LM3EXLPMAhtUXn63FHRfbKPgEtL6qNNtCTjf9yDcv2ew1g1eXJ71t6Dlc9NBPKKHPHFvF7wM6mX6l+8nHTqaRV+e4/f6hK+cnJU+SRgiFzz/8c235m842Y5PYxZonXvpn+PGt+MZimOvTNsnFMH5IGa+WjJld79v2mSrhA5tvLl2eGGEqGJ3Hr6Dkk9MhhkzFhSjPlQ5qFIf6dcT+2OkoLup1npN6tMIP0J/QKlNPXOGYHfBukjEb3XznTfRp0tUCOVGUZqV0p7jUdjLEjvZRM8ZNJE8MrIZAuiFt+2FkqaP9p4naeOMRSLLOeAd4bF+YtqaBU8tb0CJ/GW5G7CW1CpbBuZSpYh/RuB0HH2RwbrCDkplBGAyID54qCV9+wzarAVkqqRxU4SSYMXe3Gpd0WvW9i7TJdXZSnQLlPjLOjq+7OcrPuDLiDeX22u/no/5NievUlyD33RRNLx7ir6j0HvKm2xowP1jvBsuitHgh5tiPYjemd2L2LM9zFZwWGwpenkPJz9Xld5n4AUWYH/zx6RSaMSHOLZXYrBvd2Wir9INuiRNBQiwTG/SrImxPMmi6LEjCeiHd6YbG9WgfZx27Yo8hULxbhyYVblpBK1z8cLgplf6V0vyBLfwBEyowdKfKwhdv8VZn1PKfl+IJfEaqtYEyf1YTpSuW93qv2YHFhrXH2RoYvj8CUHPapi0+diHlH+bkR0rhSXKzLJhf/JMEYoiIcNXroxFmO14S8Gj72/aTZqmXbk4vk4k0HmepzoblZlY1HJfCM0pDu67Pl2+ZwdJsxTTmLjj6xbGJkdxBgG6pE0dtT/z94NX7IG+AngfkG/Hs1bgDXDOjBFeo6jCTR9yHtnL6gowj+Jag07s6wodpDzRrv2Z7MoAwztzXjOf4bMs1ouG1gih0PpnAgBPyfSB/XB/1/4kmPdEc/vO83dqWrhWa/tikKywCKyl/wTChVxD1Imfz2lHMiVvEkL+1S2E/65yMfJjal/7iIFiYxQyPDilMf3A+ftkT/Eed4HnTdYVVMU9/ekF+sy+Ppqe/OAsUDDlY6bOezyvPq4bEIvv+TWk8xVjkjK4JVhasZS9ewmQGV2wRnhfXBK+JLyIvrC3Lz2HIpAVRWIuB+UQHYSDD6cjb6KQqkGuUUqHgHK7fQpyimUh6uUlxpUN442M2dEC+8CvGh6sqaTEQJPjIGEvLHQ+O+rrARPNeUTY2+/0z7VVJoEjsdUyUtn20W4SBLuLHYSNNFLnFuhyF1dFq3ru0hN/6Lby6hfQvLoRfC6e4mg7hW11XCb6j3+CVS25fuOPNIAb9RymW5+t1pH3WBWdMxiTJsYJcE7Z0OyJuMYfwpwv1d+dnA5ndMVQtKDgEYhh8K1l4EpDkkBGanr6AD5fY/9dx7nKTokSfL031gEeeRTleRRSJ+/U5PkE5Y0JCGn78htsK2xHIjwcW/oTSlsf7/9rGY1ITOAyv8tqyevvPi+aE/T+tlUOAyeQb4KhbqaxMRPlTyTuXSfuAvDjpmnQpdfmlUP83CLg5HnDje7cNDQ4Cy+VjyIGbNfLDCJ+n2Hkf7Wpc/wtg+J/XPumTrmdk1e1ap8oV3D1Tg57Gp+YvZMJM+hfzpla9xx88f2+OCduFD06XfGZRwRXq93l1STqrN++jXrhOMxz+LhxHM4NojU8Nn/g8Z0l9JgZJP016uvmaZ7WWcYzuvcHgb4iQjaDsEBUar5jqnLhWaFwpg8hUmkjk9wOC5Qfce+tA1D6bQnNzVMQQYHTAMMvj9+3VsZBAimcHcM7KWq+/90kPfP/DZ5UmzKjW+N8ogzj33E+32/v/yq8tQ2ut7nNrYNDxf7gciZhplAk3uv2jWaswfDwJveRXPDxs4qScU4c/GfockJSZl0apjFfTMLtmxcQinqCXol88+exSFfKxi8Re6j/x8qyJ2Ws+mx0WAaNmiZrpFVBP+xfPtRMfyxst0O3zu0N6f3FSUjm9W3DvkFp/nLDB2W3MNeYcpQnYHWQPExRz6M+fSQ4/OgqmEQoZxl+2v87fRGSnjeQdtkq6AspJZiet/KfnrYX6erQBwFs3m1V5wkYRhuNT9D9YHQHNRLL8T9VIu6d4pVgBS+/GyfCPt5gAweD7q4Djk5H+0mBUtzno3mum967Fl5414YEXZrKeTerMKwRIgYgKTFZ6pqeyL8VlAkeag6CC1OrUvoXQF4dT+EaCUjYlmC9bmq+BhI0YprnAdUi3EUrKLapPu+JJeuM9ErEci2Nz8MGifAtKooky0eOf5gZtQTokrPTpCuhaxc/RoE21H9tIabhb2GvgIskGRpM9p40yMmA4STxovvANyZycTlCvLh0g7VrCbMHpXmTTcHDutHjTqiRyfm3zYTbSewmxaH50w8bE971KfDJmNyxcnNbAnaiqj2Svafql7trNkJNzs3L9KaI8p0c24plCi6M9l1y8Du4ICf2obmQC09ll87kG8/zjeXWzAAAAA==" alt="Harish Trading Academy" width="60" height="60"></div>
+      <div class="brand-name">Harish Trading Academy<small>Market education channel</small></div>
+    </div>
+    <span class="lang-chip"><span class="kn">ಕನ್ನಡ</span> + English</span>
+  </header>
+
+  <section class="hero">
+    <span class="tag"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L19 7"/></svg></i><span class="kn">ಉಚಿತ ಕಲಿಕೆ</span>&nbsp;· Free Learning</span>
+    <h1>Guard your capital first, <span class="accent">then read the charts.</span></h1>
+    <p class="h1-kn">ಮೊದಲು ಬಂಡವಾಳದ ರಕ್ಷಣೆ, ನಂತರ ಚಾರ್ಟ್ ಕಲಿಕೆ.</p>
+    <p class="sub">Calm, simple lessons in Kannada and English that put risk awareness ahead of every chart pattern.</p>
+  </section>
+
+  <div class="stack" aria-hidden="true">
+    <div class="lcard c1"><span class="lbl">Lesson</span><span class="ttl">Market Terms</span><div class="bars"><span></span><span></span></div></div>
+    <div class="lcard c2"><span class="lbl">Lesson</span><span class="ttl">Volume Basics</span><div class="bars"><span></span><span></span></div></div>
+    <div class="lcard c3">
+      <span class="lbl">Start here</span>
+      <div class="row">
+        <div class="shield"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div><span class="ttl">Risk comes first</span><br><span class="kn">ಅಪಾಯದ ಅರಿವು ಮೊದಲು</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="points">
+    <div class="pt">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M9 20V4M14 20v-7M19 20v-11"/></svg></span>
+      <span><b>ವಾಲ್ಯೂಮ್ ಮೂಲಗಳು</b><span class="en">Volume Basics</span><span class="d">See how much activity sits behind a price move.</span></span>
+    </div>
+    <div class="pt">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h11a3 3 0 013 3v11H7a3 3 0 01-3-3V5z"/><path d="M8 9h6M8 13h4"/></svg></span>
+      <span><b>ಮಾರುಕಟ್ಟೆ ಪದಗಳ ಅರ್ಥ</b><span class="en">Market Terms Explained</span><span class="d">Everyday trading words broken down in plain language.</span></span>
+    </div>
+    <div class="pt">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 17h18"/><path d="M5 15l4-5 4 3 4-6 2 3"/></svg></span>
+      <span><b>ಸಪೋರ್ಟ್ ಮತ್ತು ರೆಸಿಸ್ಟೆನ್ಸ್</b><span class="en">Support &amp; Resistance</span><span class="d">Spot the zones where price has often paused before.</span></span>
+    </div>
+  </section>
+
+  <section class="dock">
+    <div class="cta-wrap">
+      <a id="cta" class="cta" href="https://t.me/+HueQyen9ClE5ZGNl">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 3.2L2.9 10.4c-.9.4-.9 1.7.1 2l4.6 1.5 1.8 5.6c.3.9 1.4 1.1 2 .4l2.6-2.8 4.7 3.5c.7.5 1.7.1 1.9-.8l3-14.6c.2-1.1-.9-2-2.2-1.5zM9.6 14.3l-.5 3.6-1.2-3.9 9.6-6.9-7.9 7.2z"/></svg>
+        <span>JOIN FREE TELEGRAM CHANNEL</span>
+      </a>
+    </div>
+    <p class="status"><span class="dot"></span><span>ಸಂಪೂರ್ಣ ಉಚಿತ · ಯಾವುದೇ ಪಾವತಿ ಇಲ್ಲ · ಯಾವಾಗ ಬೇಕಾದರೂ ಬಿಡಬಹುದು</span></p>
+    <div class="disc">
+      <p class="kn"><strong>ಸೂಚನೆ:</strong> ಈ ಚಾನೆಲ್ ಕೇವಲ ಶೈಕ್ಷಣಿಕ ಉದ್ದೇಶಕ್ಕಾಗಿ ಮಾತ್ರ. ಇದು ಹೂಡಿಕೆ ಸಲಹೆ ಅಥವಾ ಖರೀದಿ/ಮಾರಾಟ ಶಿಫಾರಸು ಅಲ್ಲ. ನಾವು SEBI ನೋಂದಾಯಿತ ಸಲಹೆಗಾರರಲ್ಲ. ಟ್ರೇಡಿಂಗ್‌ನಲ್ಲಿ ಬಂಡವಾಳ ನಷ್ಟ ಸೇರಿದಂತೆ ಅಪಾಯವಿದೆ.</p>
+      <p><strong>Disclaimer:</strong> For educational purposes only. Not investment advice or a buy/sell recommendation. We are not SEBI-registered advisors. Trading involves risk, including loss of capital.</p>
+    </div>
+    <footer class="foot">
+      © <span id="yr">2026</span> Harish Trading Academy · <a href="#privacy" id="ppOpen">Privacy Policy</a><br>
+      This site is not a part of the Facebook website or Meta Platforms, Inc.
+    </footer>
+  </section>
+
+</main>
+
+<section id="privacy" class="pp" role="dialog" aria-modal="true" aria-labelledby="ppTitle">
+  <div class="pp-box">
+    <button type="button" class="pp-x" id="ppClose" aria-label="Close">×</button>
+    <h2 id="ppTitle">Privacy Policy · <span class="kn">ಗೌಪ್ಯತಾ ನೀತಿ</span></h2>
+    <p class="upd">Last updated: October 2026</p>
+
+    <h3>1. Who we are · <span class="kn">ನಾವು ಯಾರು</span></h3>
+    <p>This website is operated by Harish Trading Academy. It introduces our free educational Telegram channel about stock market basics.</p>
+    <p class="kn">ಈ ವೆಬ್‌ಸೈಟ್ ಅನ್ನು Harish Trading Academy ನಡೆಸುತ್ತದೆ.</p>
+
+    <h3>2. Information we collect · <span class="kn">ನಾವು ಸಂಗ್ರಹಿಸುವ ಮಾಹಿತಿ</span></h3>
+    <p>This page has no forms and never asks for your name, phone number or email. When you tap the join button, your browser saves a small flag (a timestamp) on your own device. The Meta Pixel records that the page was viewed and that the join button was clicked.</p>
+    <p class="kn">ನಾವು ಯಾವುದೇ ಫಾರ್ಮ್ ಮೂಲಕ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಕೇಳುವುದಿಲ್ಲ.</p>
+
+    <h3>3. Meta Pixel · <span class="kn">ಮೆಟಾ ಪಿಕ್ಸೆಲ್</span></h3>
+    <p>We use the Meta Pixel, a tool from Meta Platforms, Inc., to measure how our ads perform. Meta may receive technical details such as your browser type, device information, IP address and cookies, and handles them under its own privacy policy.</p>
+    <p class="kn">ಜಾಹೀರಾತಿನ ಫಲಿತಾಂಶ ಅಳೆಯಲು ಮಾತ್ರ ಮೆಟಾ ಪಿಕ್ಸೆಲ್ ಬಳಸುತ್ತೇವೆ.</p>
+
+    <h3>4. Browser storage · <span class="kn">ಬ್ರೌಸರ್ ಸಂಗ್ರಹಣೆ</span></h3>
+    <p>We store one item in your browser's local storage: the time you tapped the join button. It helps us avoid counting the same visitor twice and is kept for up to 180 days. You can remove it at any time by clearing your browser's site data.</p>
+    <p class="kn">ಬ್ರೌಸರ್ ಡೇಟಾ ಅಳಿಸಿ ಇದನ್ನು ಯಾವಾಗ ಬೇಕಾದರೂ ತೆಗೆಯಬಹುದು.</p>
+
+    <h3>5. How we use information · <span class="kn">ಮಾಹಿತಿಯ ಬಳಕೆ</span></h3>
+    <p>We use this information only to measure our ads and to filter out fake or duplicate clicks. We never sell your information.</p>
+    <p class="kn">ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನಾವು ಎಂದಿಗೂ ಮಾರುವುದಿಲ್ಲ.</p>
+
+    <h3>6. Telegram · <span class="kn">ಟೆಲಿಗ್ರಾಮ್</span></h3>
+    <p>The join button opens Telegram, a separate service with its own privacy policy. Joining the channel and leaving it are entirely your choice.</p>
+    <p class="kn">ಟೆಲಿಗ್ರಾಮ್‌ಗೆ ತನ್ನದೇ ಆದ ಗೌಪ್ಯತಾ ನೀತಿ ಇದೆ.</p>
+
+    <h3>7. Data retention · <span class="kn">ಡೇಟಾ ಉಳಿಸುವ ಅವಧಿ</span></h3>
+    <p>Ad audiences built from Meta Pixel events are kept for up to 180 days. The browser flag described above also expires after 180 days.</p>
+    <p class="kn">ಗರಿಷ್ಠ 180 ದಿನಗಳವರೆಗೆ ಮಾತ್ರ ಉಳಿಸಲಾಗುತ್ತದೆ.</p>
+
+    <h3>8. Your choices &amp; rights · <span class="kn">ನಿಮ್ಮ ಆಯ್ಕೆಗಳು ಮತ್ತು ಹಕ್ಕುಗಳು</span></h3>
+    <p>You can clear your browser storage, block cookies or trackers in your browser settings, and manage ad preferences in your Facebook or Instagram settings. Under India's Digital Personal Data Protection Act, 2023, you have rights such as accessing, correcting and erasing your personal data and withdrawing consent.</p>
+    <p class="kn">DPDP ಕಾಯ್ದೆ 2023 ರ ಅಡಿಯಲ್ಲಿ ನಿಮಗೆ ಈ ಹಕ್ಕುಗಳಿವೆ.</p>
+
+    <h3>9. Age 18+ · <span class="kn">18+ ವಯಸ್ಸು</span></h3>
+    <p>This website and channel are intended only for adults aged 18 and above.</p>
+    <p class="kn">ಇದು 18 ವರ್ಷ ಮೇಲ್ಪಟ್ಟವರಿಗೆ ಮಾತ್ರ.</p>
+
+    <h3>10. Not investment advice · <span class="kn">ಹೂಡಿಕೆ ಸಲಹೆ ಅಲ್ಲ</span></h3>
+    <p>All content is for education only. It is not investment advice or a buy/sell recommendation. We are not SEBI-registered advisors, and trading involves risk, including loss of capital.</p>
+    <p class="kn">ಎಲ್ಲಾ ವಿಷಯಗಳು ಕೇವಲ ಶಿಕ್ಷಣಕ್ಕಾಗಿ.</p>
+
+    <h3>11. Changes · <span class="kn">ಬದಲಾವಣೆಗಳು</span></h3>
+    <p>We may update this policy from time to time. The date at the top shows the latest version.</p>
+    <p class="kn">ಈ ನೀತಿಯನ್ನು ಕಾಲಕಾಲಕ್ಕೆ ನವೀಕರಿಸಬಹುದು.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  /* ===== Settings ===== */
+  var TG_LINK = 'https://t.me/+HueQyen9ClE5ZGNl';
+  var MIN_TIME = 1000;
+  var KEEP_DAYS = 180;
+  var MIN_WAIT_MS = 150;
+  var MAX_WAIT_MS = 500;
+
+  var PREFIX = 'hta';
+  var KEY = PREFIX + '_sub_at';
+  var loadTime = Date.now();
+  var human = false;
+  var fired = false;
+
+  ['touchstart','pointerdown','pointermove','scroll','wheel','keydown'].forEach(function(ev){
+    window.addEventListener(ev, function(e){ if (e.isTrusted) human = true; }, {passive:true, capture:true});
+  });
+
+  function isBot(){
+    try{
+      if (navigator.webdriver) return true;
+      var ua = navigator.userAgent || '';
+      if (/bot|crawler|spider|headless|facebookexternalhit|lighthouse|preview/i.test(ua)) return true;
+      if (!navigator.languages || navigator.languages.length === 0) return true;
+    }catch(e){}
+    return false;
+  }
+
+  function alreadySubscribed(){
+    try{
+      var v = parseInt(localStorage.getItem(KEY), 10);
+      if (!v) return false;
+      return (Date.now() - v) < KEEP_DAYS * 86400000;
+    }catch(e){ return false; }
+  }
+
+  function markSubscribed(){
+    try{ localStorage.setItem(KEY, String(Date.now())); }catch(e){}
+  }
+
+  function go(){ window.location.href = TG_LINK; }
+
+  function waitForPixel(MIN, MAX, done){
+    var start = Date.now(), ran = false, obs = null;
+    function finish(){
+      if (ran) return; ran = true;
+      try{ if (obs) obs.disconnect(); }catch(e){}
+      done();
+    }
+    function seen(){ setTimeout(finish, Math.max(0, MIN - (Date.now() - start))); }
+    try{
+      if ('PerformanceObserver' in window){
+        obs = new PerformanceObserver(function(list){
+          list.getEntries().forEach(function(en){
+            if (/facebook\.com\/tr/.test(en.name) && /ev=Subscribe/.test(en.name)) seen();
+          });
+        });
+        obs.observe({type:'resource', buffered:true});
+      }
+    }catch(e){}
+    setTimeout(finish, MAX);
+  }
+
+  var cta = document.getElementById('cta');
+  cta.href = TG_LINK;
+  cta.addEventListener('click', function(e){
+    var ok = e.isTrusted && human && (Date.now() - loadTime >= MIN_TIME) && !isBot() &&
+             !fired && !alreadySubscribed() && document.visibilityState === 'visible' &&
+             typeof fbq === 'function';
+    if (!ok) return;
+    fired = true;
+    markSubscribed();
+    fbq('track', 'Subscribe', {content_name:'Telegram Join', currency:'INR', value:0},
+        {eventID: PREFIX + '_' + loadTime + '_' + Math.random().toString(36).slice(2, 10)});
+    e.preventDefault();
+    waitForPixel(MIN_WAIT_MS, MAX_WAIT_MS, go);
+  });
+
+  /* ===== Privacy popup ===== */
+  var pp = document.getElementById('privacy');
+  function openPP(e){
+    if (e) e.preventDefault();
+    pp.classList.remove('closed'); pp.classList.add('open');
+  }
+  function closePP(){
+    pp.classList.remove('open'); pp.classList.add('closed');
+    if (location.hash === '#privacy'){
+      try{ history.replaceState(null, '', location.pathname + location.search); }catch(e){}
+    }
+  }
+  document.getElementById('ppOpen').addEventListener('click', openPP);
+  document.getElementById('ppClose').addEventListener('click', closePP);
+  pp.addEventListener('click', function(e){ if (e.target === pp) closePP(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && (pp.classList.contains('open') || location.hash === '#privacy')) closePP(); });
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
